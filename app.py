@@ -3,7 +3,7 @@ from pathlib import Path
 
 import streamlit as st
 
-from refcheck import get_dois
+from refcheck.doi import get_dois
 
 DOI_REGEX = "10.\\d{4,9}/[-._;()/:a-z0-9A-Z]+"
 FORMAT_TO_EXT = {
