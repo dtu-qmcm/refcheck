@@ -15,6 +15,8 @@ FORMAT_TO_EXT = {
 
 st.title("Reference Checker")
 
+st.write("Get a clickable list of the dois in your document.")
+
 format = st.selectbox("Enter your file format", options=FORMAT_TO_EXT.keys())
 ext = FORMAT_TO_EXT[format]
 
