@@ -18,7 +18,7 @@ st.title("Reference Checker")
 format = st.selectbox("Enter your file format", options=FORMAT_TO_EXT.keys())
 ext = FORMAT_TO_EXT[format]
 
-uploaded_file = st.file_uploader("Upload a file!", type=ext)
+uploaded_file = st.file_uploader("Upload a file", type=ext)
 results = []
 if uploaded_file is not None:
     temp_dir = tempfile.mkdtemp()
