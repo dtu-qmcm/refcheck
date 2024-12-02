@@ -1,0 +1,18 @@
+[project]
+name = "refcheck"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pypandoc-binary>=1.14",
+    "streamlit>=1.40.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+]
+
+[tool.uv]
+package = true
