@@ -27,6 +27,6 @@ if uploaded_file is not None:
         f.write(uploaded_file.getvalue())
     results = get_dois(path, format)
 
-st.write("Here are the dois in your document. Please check if they are correct!")
-for result in results:
-    st.write(f"[{result}](https://doi.org/{result})")
+    st.write("Here are the dois in your document. Please check if they are correct!")
+    for result in results:
+        st.write(f"[{result}](https://doi.org/{result})")
