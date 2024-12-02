@@ -1,6 +1,6 @@
 # Refcheck
 
-![Tests](https://github.com/dtu-qmcm/refcheck/.github/workflows/run_tests.yml/badge.svg)
+[![Tests](https://github.com/dtu-qmcm/refcheck/actions/workflows/run_tests.yml/badge.svg)](https://github.com/dtu-qmcm/refcheck/actions/workflows/run_tests.yml)
 
 This repository contains the source code for a tiny  web app that extracts the DOIs from a document and presents them in a clickable list.
 
