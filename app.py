@@ -26,7 +26,6 @@ if uploaded_file is not None:
     with open(path, "wb") as f:
         f.write(uploaded_file.getvalue())
     results = get_dois(path, format)
-    __import__("pdb").set_trace()
 
 st.write("Here are the dois in your document. Please check if they are correct!")
 for result in results:
