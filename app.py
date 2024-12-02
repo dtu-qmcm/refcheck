@@ -3,7 +3,8 @@ from pathlib import Path
 
 import streamlit as st
 
-from refcheck.doi import get_dois
+from refcheck.doi import get_dois, doi_to_url
+from refcheck.bibtex import fetch_bibtex
 
 DOI_REGEX = "10.\\d{4,9}/[-._;()/:a-z0-9A-Z]+"
 FORMAT_TO_EXT = {
@@ -28,7 +29,10 @@ if uploaded_file is not None:
     with open(path, "wb") as f:
         f.write(uploaded_file.getvalue())
     results = get_dois(path, format)
+    urls = [doi_to_url(doi) for doi in results]
+    bibtexes = [fetch_bibtex(url) for url in urls]
 
     st.write("Here are the dois in your document. Please check if they are correct!")
-    for result in results:
-        st.write(f"[{result}](https://doi.org/{result})")
+    for doi, url, bibtex in zip(results, urls, bibtexes):
+        st.write(f"[**{doi}**]({url}):", bibtex)
+        st.write("")
