@@ -17,7 +17,7 @@ st.title("Reference Checker")
 
 st.write("Get a clickable list of the dois in your document.")
 
-format = st.selectbox("Enter your file format", options=FORMAT_TO_EXT.keys())
+format = st.selectbox("Choose a file format", options=FORMAT_TO_EXT.keys())
 ext = FORMAT_TO_EXT[format]
 
 uploaded_file = st.file_uploader("Upload a file", type=ext)
