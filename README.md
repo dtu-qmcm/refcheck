@@ -1,7 +1,6 @@
 # Refcheck
 
 [![Tests](https://github.com/dtu-qmcm/refcheck/actions/workflows/run_tests.yml/badge.svg)](https://github.com/dtu-qmcm/refcheck/actions/workflows/run_tests.yml)
-
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dtu-qmcm-refcheck-app-myspwb.streamlit.app)
 
 This repository contains the source code for a tiny  web app that extracts the DOIs from a document and presents them in a clickable list.
