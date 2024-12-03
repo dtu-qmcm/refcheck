@@ -1,4 +1,6 @@
+import json
 import re
+import requests
 from pathlib import Path
 
 import pypandoc
@@ -14,3 +16,9 @@ def get_dois(path: Path, format) -> list[str]:
 
 def doi_to_url(doi: str) -> str:
     return "http://dx.doi.org/" + doi
+
+
+def fetch_doi_json(doi_url: str) -> dict:
+    headers = {"accept": "application/json"}
+    r = requests.get(doi_url, headers=headers)
+    return json.loads(r.text) if r is not None else dict()
